@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection.Metadata;
 
@@ -8,7 +9,10 @@ namespace _04._28._óra
     {
         static void Main(string[] args)
         {
-            string adat = @"C:\Users\Zsombor\Downloads\pontszámok.txt";
+            string hely1;
+            Console.WriteLine("Kérem a file helyét");
+            hely1 = Console.ReadLine();
+            string adat = hely1;
             StreamReader f = new StreamReader(adat);
             int N = 0;
             while (!f.EndOfStream)
@@ -67,10 +71,15 @@ namespace _04._28._óra
                     } 
                 } 
             }
-            Console.WriteLine(); 
-            Console.WriteLine("A tömb elemei xsökkenő sorrendben: ");
-            for (int i = 0; i < 3; i++) Console.Write("{0}, ", pontszámok[i]);
-            for (int hely = 1; hely < 4; hely++)
+            Console.WriteLine();
+
+            /*     Console.WriteLine("A tömb elemei xsökkenő sorrendben: ");
+                 for (int i = 0; i < 3; i++) Console.Write("{0}, ", pontszámok[i]);*/
+            int elsohanyat = 0;
+            Console.WriteLine("Első hány helyet szeretné megnézni?");
+            elsohanyat = Convert.ToInt32(Console.ReadLine());
+         
+            for (int hely = 1; hely < elsohanyat; hely++)
             {
                 for (int i = 1; i < N; i++)
                 {
