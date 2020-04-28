@@ -90,6 +90,7 @@ namespace _04._28._óra
                 }
             }
         }
-                
+        //CODED BY: SKY-FRAMES.COM 
+        //UNDER LICENSE!!! https://github.com/Indoraptor1/04.28.-PRG--ra
     }
 }
